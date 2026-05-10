@@ -1,0 +1,108 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SafeTrack Dashboard</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CHART JS -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="navbar">
+
+    <div class="title-box">
+      <h1>SAFETRACK</h1>
+      <p>DASHBOARD UTPE HAZARD REPORT TRACKER</p>
+    </div>
+
+    <div class="dropdown-box">
+      <select id="monthSelect">
+        <option value="april">APRIL 2026</option>
+        <option value="mei">MEI 2026</option>
+      </select>
+    </div>
+
+  </header>
+
+  <!-- MAIN -->
+  <main class="dashboard-container">
+
+    <!-- LEFT -->
+    <section class="left-section">
+
+      <div class="card-grid">
+
+        <div class="info-card">
+          <h4>JUMLAH TOTAL SUBMIT PLANT</h4>
+          <h1 id="plantSubmit">20</h1>
+        </div>
+
+        <div class="info-card">
+          <h4>JUMLAH BELUM SUBMIT PLANT</h4>
+          <h1 id="plantBelum">67</h1>
+        </div>
+
+        <div class="info-card">
+          <h4>JUMLAH TOTAL SUBMIT OFFICE</h4>
+          <h1 id="officeSubmit">15</h1>
+        </div>
+
+        <div class="info-card">
+          <h4>JUMLAH BELUM SUBMIT OFFICE</h4>
+          <h1 id="officeBelum">55</h1>
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- RIGHT -->
+    <section class="right-section">
+
+      <div class="chart-card">
+        <h3>PLANT</h3>
+        <canvas id="plantChart"></canvas>
+      </div>
+
+      <div class="chart-card">
+        <h3>OFFICE</h3>
+        <canvas id="officeChart"></canvas>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- BOTTOM -->
+  <section class="bottom-chart">
+
+    <h2>PENCAPAIAN PROGRAM PERBULAN DALAM SATU TAHUN</h2>
+
+    <div class="bar-wrapper">
+
+      <div class="bar-card">
+        <h3>PLANT</h3>
+        <canvas id="plantBar"></canvas>
+      </div>
+
+      <div class="bar-card">
+        <h3>OFFICE</h3>
+        <canvas id="officeBar"></canvas>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
